@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Codedamn Lab</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+	</head>
+	<body>
+        <div id="container">
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+            <div class="box">box4</div>
+            <div class="box">box5</div>
+            <div class="box">box6</div>
+        </div>
+		<!-- write your code here -->
+	</body>
+</html>
+-----------------
+  #container {
+    column-count: 2;
+}
+
+.box {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #ccc;
+    break-inside: avoid; /* Prevent column breaks inside boxes */
+}
+
+.box:nth-child(3) {
+    column-span: all;
+}
+--------------------
+  // write your JavaScript code here
+function changeColumnCount(count)
+{
+    document.getElementById('container').style.columnCount = count;
+}
